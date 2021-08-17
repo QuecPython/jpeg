@@ -1,0 +1,285 @@
+# Microsoft Developer Studio Project HeliosFILE - Name="jpeg" - Package Owner=<4>
+# Microsoft Developer Studio Generated Build HeliosFILE, Format Version 6.00
+# ** NICHT BEARBEITEN **
+
+# TARGTYPE "Win32 (x86) Static Library" 0x0104
+
+CFG=jpeg - Win32
+!MESSAGE Dies ist kein gültiges Makefile. Zum Erstellen dieses Projekts mit NMAKE
+!MESSAGE verwenden Sie den Befehl "Makefile exportieren" und führen Sie den Befehl
+!MESSAGE 
+!MESSAGE NMAKE /f "jpeg.mak".
+!MESSAGE 
+!MESSAGE Sie können beim Ausführen von NMAKE eine Konfiguration angeben
+!MESSAGE durch Definieren des Makros CFG in der Befehlszeile. Zum Beispiel:
+!MESSAGE 
+!MESSAGE NMAKE /f "jpeg.mak" CFG="jpeg - Win32"
+!MESSAGE 
+!MESSAGE Für die Konfiguration stehen zur Auswahl:
+!MESSAGE 
+!MESSAGE "jpeg - Win32" (basierend auf  "Win32 (x86) Static Library")
+!MESSAGE 
+
+# Begin Project
+# PROP AllowPerConfigDependencies 0
+# PROP Scc_ProjName ""
+# PROP Scc_LocalPath ""
+CPP=cl.exe
+RSC=rc.exe
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 0
+# PROP BASE Output_Dir ".\Release"
+# PROP BASE Intermediate_Dir ".\Release"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 0
+# PROP Output_Dir ".\Release"
+# PROP Intermediate_Dir ".\Release"
+# PROP Target_Dir ""
+# ADD BASE CPP /nologo /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /YX /c
+# ADD CPP /nologo /G6 /MT /W3 /GX /Ox /Oa /Ob2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /YX /FD /c
+# ADD BASE RSC /l 0x407
+# ADD RSC /l 0x407
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LIB32=link.exe -lib
+# ADD BASE LIB32 /nologo
+# ADD LIB32 /nologo
+# Begin Target
+
+# Name "jpeg - Win32"
+# Begin Group "Quellcodedateien"
+
+# PROP Default_Filter "cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;for;f90"
+# Begin Source HeliosFILE
+
+SOURCE=.\jaricom.c
+# End Source HeliosFILE
+# Begin Source HeliosFILE
+
+SOURCE=.\jcapimin.c
+# End Source HeliosFILE
+# Begin Source HeliosFILE
+
+SOURCE=.\jcapistd.c
+# End Source HeliosFILE
+# Begin Source HeliosFILE
+
+SOURCE=.\jcarith.c
+# End Source HeliosFILE
+# Begin Source HeliosFILE
+
+SOURCE=.\jccoefct.c
+# End Source HeliosFILE
+# Begin Source HeliosFILE
+
+SOURCE=.\jccolor.c
+# End Source HeliosFILE
+# Begin Source HeliosFILE
+
+SOURCE=.\jcdctmgr.c
+# End Source HeliosFILE
+# Begin Source HeliosFILE
+
+SOURCE=.\jchuff.c
+# End Source HeliosFILE
+# Begin Source HeliosFILE
+
+SOURCE=.\jcinit.c
+# End Source HeliosFILE
+# Begin Source HeliosFILE
+
+SOURCE=.\jcmainct.c
+# End Source HeliosFILE
+# Begin Source HeliosFILE
+
+SOURCE=.\jcmarker.c
+# End Source HeliosFILE
+# Begin Source HeliosFILE
+
+SOURCE=.\jcmaster.c
+# End Source HeliosFILE
+# Begin Source HeliosFILE
+
+SOURCE=.\jcomapi.c
+# End Source HeliosFILE
+# Begin Source HeliosFILE
+
+SOURCE=.\jcparam.c
+# End Source HeliosFILE
+# Begin Source HeliosFILE
+
+SOURCE=.\jcprepct.c
+# End Source HeliosFILE
+# Begin Source HeliosFILE
+
+SOURCE=.\jcsample.c
+# End Source HeliosFILE
+# Begin Source HeliosFILE
+
+SOURCE=.\jctrans.c
+# End Source HeliosFILE
+# Begin Source HeliosFILE
+
+SOURCE=.\jdapimin.c
+# End Source HeliosFILE
+# Begin Source HeliosFILE
+
+SOURCE=.\jdapistd.c
+# End Source HeliosFILE
+# Begin Source HeliosFILE
+
+SOURCE=.\jdarith.c
+# End Source HeliosFILE
+# Begin Source HeliosFILE
+
+SOURCE=.\jdatadst.c
+# End Source HeliosFILE
+# Begin Source HeliosFILE
+
+SOURCE=.\jdatasrc.c
+# End Source HeliosFILE
+# Begin Source HeliosFILE
+
+SOURCE=.\jdcoefct.c
+# End Source HeliosFILE
+# Begin Source HeliosFILE
+
+SOURCE=.\jdcolor.c
+# End Source HeliosFILE
+# Begin Source HeliosFILE
+
+SOURCE=.\jddctmgr.c
+# End Source HeliosFILE
+# Begin Source HeliosFILE
+
+SOURCE=.\jdhuff.c
+# End Source HeliosFILE
+# Begin Source HeliosFILE
+
+SOURCE=.\jdinput.c
+# End Source HeliosFILE
+# Begin Source HeliosFILE
+
+SOURCE=.\jdmainct.c
+# End Source HeliosFILE
+# Begin Source HeliosFILE
+
+SOURCE=.\jdmarker.c
+# End Source HeliosFILE
+# Begin Source HeliosFILE
+
+SOURCE=.\jdmaster.c
+# End Source HeliosFILE
+# Begin Source HeliosFILE
+
+SOURCE=.\jdmerge.c
+# End Source HeliosFILE
+# Begin Source HeliosFILE
+
+SOURCE=.\jdpostct.c
+# End Source HeliosFILE
+# Begin Source HeliosFILE
+
+SOURCE=.\jdsample.c
+# End Source HeliosFILE
+# Begin Source HeliosFILE
+
+SOURCE=.\jdtrans.c
+# End Source HeliosFILE
+# Begin Source HeliosFILE
+
+SOURCE=.\jerror.c
+# End Source HeliosFILE
+# Begin Source HeliosFILE
+
+SOURCE=.\jfdctflt.c
+# End Source HeliosFILE
+# Begin Source HeliosFILE
+
+SOURCE=.\jfdctfst.c
+# End Source HeliosFILE
+# Begin Source HeliosFILE
+
+SOURCE=.\jfdctint.c
+# End Source HeliosFILE
+# Begin Source HeliosFILE
+
+SOURCE=.\jidctflt.c
+# End Source HeliosFILE
+# Begin Source HeliosFILE
+
+SOURCE=.\jidctfst.c
+# End Source HeliosFILE
+# Begin Source HeliosFILE
+
+SOURCE=.\jidctint.c
+# End Source HeliosFILE
+# Begin Source HeliosFILE
+
+SOURCE=.\jmemmgr.c
+# End Source HeliosFILE
+# Begin Source HeliosFILE
+
+SOURCE=.\jmemnobs.c
+# End Source HeliosFILE
+# Begin Source HeliosFILE
+
+SOURCE=.\jquant1.c
+# End Source HeliosFILE
+# Begin Source HeliosFILE
+
+SOURCE=.\jquant2.c
+# End Source HeliosFILE
+# Begin Source HeliosFILE
+
+SOURCE=.\jutils.c
+# End Source HeliosFILE
+# End Group
+# Begin Group "Header-Dateien"
+
+# PROP Default_Filter "h;hpp;hxx;hm;inl;fi;fd"
+# Begin Source HeliosFILE
+
+SOURCE=.\jconfig.h
+# End Source HeliosFILE
+# Begin Source HeliosFILE
+
+SOURCE=.\jdct.h
+# End Source HeliosFILE
+# Begin Source HeliosFILE
+
+SOURCE=.\jerror.h
+# End Source HeliosFILE
+# Begin Source HeliosFILE
+
+SOURCE=.\jinclude.h
+# End Source HeliosFILE
+# Begin Source HeliosFILE
+
+SOURCE=.\jmemsys.h
+# End Source HeliosFILE
+# Begin Source HeliosFILE
+
+SOURCE=.\jmorecfg.h
+# End Source HeliosFILE
+# Begin Source HeliosFILE
+
+SOURCE=.\jpegint.h
+# End Source HeliosFILE
+# Begin Source HeliosFILE
+
+SOURCE=.\jpeglib.h
+# End Source HeliosFILE
+# Begin Source HeliosFILE
+
+SOURCE=.\jversion.h
+# End Source HeliosFILE
+# End Group
+# Begin Group "Ressourcendateien"
+
+# PROP Default_Filter "ico;cur;bmp;dlg;rc2;rct;bin;cnt;rtf;gif;jpg;jpeg;jpe"
+# End Group
+# End Target
+# End Project
