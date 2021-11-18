@@ -484,4 +484,78 @@ int yuv420_NV12_to_jpg(char *filename, int img_width, int img_height, unsigned c
 
 }
 
+int yuv422_UYVY_to_jpg(char *filename, int img_width, int img_height, unsigned char *pYUVBuffer, int width, int height)
+{
+	HeliosFILE *pJpegFile = NULL;
+	struct jpeg_compress_struct cinfo;
+	struct jpeg_error_mgr jerr;
+	JSAMPROW row_pointer[1];
+	int i = 0, j = 0;
+	unsigned char *ptr;
+	unsigned char yuvbuf[width * 3];
+	uint_32 yuv_i = 0,yuv_j = 0;
+	
+	float zoom_out_val_w_f = 0.0;
+    float zoom_out_val_h_f = 0.0;
+	int index = 0;
+
+	cinfo.err = jpeg_std_error(&jerr);//用于错误信息
+	jpeg_create_compress(&cinfo);  //初始化压缩对象
+	
+	if ((pJpegFile = Helios_fopen(filename, "wb")) == NULL)
+	{	 
+		return -1;
+	}		
+	jpeg_stdio_dest(&cinfo, pJpegFile);
+	
+	cinfo.image_width = img_width;//设置输入图片宽度
+	cinfo.image_height = img_height;//设置图片高度
+	cinfo.input_components = 3;
+	cinfo.in_color_space = JCS_YCbCr;//设置输入图片的格式，支持RGB/YUV/YCC等等
+	jpeg_set_defaults(&cinfo);//其它参数设置为默认的！
+	jpeg_set_quality(&cinfo, 80, TRUE);//设置转化图片质量，范围0-100
+	jpeg_start_compress(&cinfo, TRUE);
+	
+	memset(yuvbuf, 0, img_width*3);
+	
+	zoom_out_val_w_f = (float)((float)width / (float)img_width);
+    zoom_out_val_h_f = (float)((float)height / (float)img_height);
+
+	JPEG_LOG("zoom %f, %f\n", zoom_out_val_w_f, zoom_out_val_h_f);
+	
+	j = 1;
+	
+	ptr = pYUVBuffer;
+	
+	while (cinfo.next_scanline < cinfo.image_height) {
+		index = 0; 
+		for (i = 0; i < img_width; i ++){//输入的YUV图片格式为标准的YUV444格式，所以需要把YUV422转化成YUV444.
+		
+			yuv_i = (uint_32)(i * zoom_out_val_w_f);
+		
+			yuvbuf[index++] = *(ptr + (yuv_i*2)+1);
+			yuvbuf[index++] = *(ptr + (yuv_i/2)*4);
+			yuvbuf[index++] = *(ptr + (yuv_i/2)*4 + 2);
+
+		}
+		
+		row_pointer[0] = yuvbuf;
+		(void)jpeg_write_scanlines(&cinfo, row_pointer, 1);//单行图片转换压缩
+		yuv_j = (uint_32)(j * zoom_out_val_h_f);
+		ptr = pYUVBuffer + yuv_j*width*2;
+		j++;	
+	}
+
+
+	
+	jpeg_finish_compress(&cinfo);
+	jpeg_destroy_compress(&cinfo);
+	
+	if(0 != Helios_fclose(pJpegFile)) {
+		JPEG_LOG("fs close failed\n");
+		return -1;
+	}
+	return 0;
+}
+
 

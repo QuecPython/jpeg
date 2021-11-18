@@ -32,6 +32,9 @@ int yuv420_nv12_to_rgb888(uint_8 *pRgb888Data, uint_32 rgbWidth, uint_32 rgbHeig
 
 int yuv420_NV12_to_jpg(char *filename, int img_width, int img_height, unsigned char *pYUVBuffer, int width, int height);
 
+int yuv422_UYVY_to_jpg(char *filename, int img_width, int img_height, unsigned char *pYUVBuffer, int width, int height);
+
+
 #ifdef __cplusplus
 }
 #endif
